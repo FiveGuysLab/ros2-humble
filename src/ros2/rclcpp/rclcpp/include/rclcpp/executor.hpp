@@ -42,7 +42,6 @@
 #include "rclcpp/utilities.hpp"
 #include "rclcpp/visibility_control.hpp"
 
-#define MAX_TIMING_RESULTS 10000
 namespace rclcpp
 {
 
@@ -79,9 +78,6 @@ public:
   RCLCPP_PUBLIC
   virtual ~Executor();
 
-  // Timing results storage
-  std::vector<long> timing_results;
-  
   /// Do work periodically as it becomes available to us. Blocking call, may block indefinitely.
   // It is up to the implementation of Executor to implement spin.
   virtual void
